@@ -362,3 +362,25 @@ p{
   .buttoncoffee:hover{
     background-color: white;
   }
+  .footerdiv{
+    background-color: #1e3932;
+  }
+  footer{
+    /* height: 80px; */
+    /* border:10px double orange */
+    text-align: center;
+    color: white
+}
+
+.footText{
+    font-size: 20px;
+}
+
+.footDiv{
+    display: inline-block;
+    width:32%;
+    border-right: 2px solid white;
+}
+.socialLogo{
+    height:50px
+}
