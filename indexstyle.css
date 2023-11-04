@@ -5,6 +5,17 @@
 li{
     margin: 1rem;
 }
+:root{
+    --background:#000;
+    --text:white;
+    --highlight:deepskyblue;
+}
+
+nav{
+    z-index: 100;
+    background-color: white !important;
+}
+ 
 /*.nav-link:hover{
     border-bottom: 2px solid green;
 }
@@ -12,10 +23,44 @@ li{
 .nav-link ul li.active-link .underline{
     border-bottom: 2px solid rgb(7, 65, 21);
 }*/
+.navtextcolor{
+    color: green;
+}
+
+.navsticky{
+    border-bottom: 1px solid green  ;
+    position: sticky;
+    top:0;
+}
 
 .nav-link:active{
     border-bottom: 2px solid rgb(7, 65, 21);
 }
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.darmode{
+    background-color: black !important;
+    color: white !important;
+}
+
+.darmode nav{
+    background-color: black !important;   
+}
+
+.darmode navtextcolor{
+    color: white;
+}
+
+
+
+.darknight{
+    color:#00754a;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
 .searchbox{
     float: right;
     display: flex;
@@ -25,6 +70,77 @@ li{
     opacity: 1;
   
 }
+
+#coupon{
+    height: 52%;
+    width: 40%;
+    background-image: url(images/coupon_1.png);
+    position: absolute;
+    margin-top: -8%;
+    margin-left: 25%;
+    z-index: 100;
+    border-radius: 15px;
+    box-shadow: 0 10px 10px 0 rgba(15, 85, 43, 0.15);
+    visibility:hidden;
+
+}
+.btncoupon{
+   
+    background-image: url(images/close_icon.svg);
+    margin-left: 95%;
+    margin-top: 2px;
+    border-radius: 30px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    align-items: center;
+    position: absolute;
+}
+.logocoupon{
+    width: 60px;
+    border-radius:8px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 40%;
+
+}
+#coupon h3{
+    margin-left: 20%;
+    font-size: 25px;
+    font-weight: 501;
+    line-height: 40px;
+    color: #1e3932;
+    
+}
+#coupon p{
+    font-size: 15px;
+    align-items: center;
+    margin-left: 35%;
+    margin-bottom: 2%;
+    color: #1e3932;
+}
+.coupon-row{
+    display: flex;
+    align-items: center;
+    margin: 25px auto;
+    width: fit-content;
+    color: #1e3932;
+}
+#cpncode{
+    border: 1px dashed #23b45d;
+    padding: 10px 20px;
+    border-radius: 0;
+    font-weight: 501;
+}
+#cpnbtn{
+    border: 1px dashed #23b45d;
+    padding: 10px 20px;
+    color: #096;
+    background: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
 .circleuser{
     margin: 1rem;
     color: rgb(168, 176, 183);
@@ -71,6 +187,8 @@ li{
     font-weight: bold;
     margin-top: 2%;
 }
+
+
 .img-edit{
         height: 108px;
         width: 108px;
@@ -200,13 +318,16 @@ p{
     height: 250px;
     border-bottom: 2px solid rgb(228, 235, 231);
 }
-.card-title1{
+.card-title{
     font-weight: bolder;
     font-size: 15px;
     margin-left: 2%;
-
-
+    color: #050c0a;
 }
+.card-text{
+    color: #1f1f1f;
+}
+
 .card{
     margin: 0.5em;
     border-radius: 2%;
@@ -259,6 +380,7 @@ p{
     font-weight: bold;
     position: absolute;
     margin-top: 5px;
+    color: #1f1f1f;
   }
 
 

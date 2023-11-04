@@ -5,45 +5,53 @@
         <link rel="icon" type="image/png" href="images/logo.png">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
-        <link rel="stylesheet" href="indexstyle.css">
         <script src="https://kit.fontawesome.com/c4338603d0.js" crossorigin="anonymous"></script>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <script src="index.js"></script>
+        <script src="js/index.js"></script>
         <link rel="stylesheet" href="css/owl.carousel.min.css">
         <link rel="stylesheet" href="css/owl.theme.default.min.css">   
-        
+        <link rel="stylesheet" href="indexstyle.css">
     </head>
-    <body>
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
-                <div class="container">
+    <body id="contcoupon1">
+            <nav class="navbar navbar-expand-lg navbar-text navsticky">
+                <div class="container" id="contcoupon">
                     <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Starbucks" class="logo"/></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#divnavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                   <!-- <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#divnavbar"
+                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                      </button>
+                      </button>-->
+                      <button type="button" class="navbar-toggler md-3"  data-bs-toggle="collapse" data-bs-target="#divnavbar">
+                       <i class="bx bx-menu bx-md navtextcolor"></i>
+                       </button>
                     
                     <div class="collapse navbar-collapse" id="divnavbar">
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a class="nav-link active"  aria-current="page" href="#">Home</a>
+                                <a class="nav-link active navtextcolor"   aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item" >
-                                <a class="nav-link"  aria-current="page"  href="#">Gift</a>
+                                <a class="nav-link navtextcolor"  aria-current="page"  href="#">Gift</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  aria-current="page" href="#">Order</a>
+                                <a class="nav-link navtextcolor"  aria-current="page" href="#">Order</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  aria-current="page" href="#" >Pay</a>
+                                <a class="nav-link navtextcolor"  aria-current="page" href="#" >Pay</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link"  aria-current="page" href="#" >Store</a>
+                                <a class="nav-link navtextcolor"  aria-current="page" href="#" >Store</a>
                             </li>
                         </ul>
                         
                     </div>
+                    <div class="darknight" id="btndark">
+                        <spam id="out"></spam>
+                        <spam id="weather">  </spam>
+                        <i class='bx bxs-moon bx-tada' onclick="changeMode()" ></i>
+                    </div>
                     <div class="search-form"> 
-                        <input type="search" class="form-control searchbox" placeholder="Search"/>
+                        <input type="search" class="form-control searchbox" placeholder="Location & Search" onClick="geolocation()" />
                     </div>
                     <div class="d-flix">
                         <i class="fa-regular fa-circle-user circleuser"></i>
@@ -58,7 +66,19 @@
                         <button class="btn btn-knowmore ">Know More</button>
                     </div>
             </div>
-            <div class="container">
+            <div class="container" id="contcoupon" >
+
+                    <div id="coupon">
+                        <input type="button" onclick="CloseCoupon()" class="btncoupon" ></input>
+                        <img src="images/logo.png" alt="Starbucks" class="logocoupon"/></a>
+                        <h3> 50% Flat off on all coffee Near <br>the City using SBI Credit Card</h3>
+                    <div class="coupon-row">
+                        <span id="cpncode">STEALDEAL30</span>
+                        <span id="cpnbtn">COPY CODE</span>
+                    </div>
+                        <p> Valid Till : 12 Nov 2023</p>
+                    </div>
+                
                 <div class="divconthome">
                     <span>Handcrafted Curations</span>
                 </div>
@@ -90,7 +110,7 @@
                 
                 </div>
             </div>
-            <div class="container">
+            <div class="container" id="contcoupon">
                 <div id="divcarouselindicators" class="carousel slide">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#divcarouselindicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -167,7 +187,7 @@
                 </div>
                 
             </div></br>
-            <div class="container">
+            <div class="container" id="contcoupon">
                 <div class="divconthome">
                     Latest Offerings 
                 </div></br>
@@ -233,7 +253,7 @@
                     </div>
                 </div>
             </div>
-            <div class="cardbody">
+            <div class="cardbody" id="contcoupon">
                 <div class="container">
                     <div class="divconthome"></br>
                         Barista Recommends
@@ -278,7 +298,7 @@
                     </div>
                 </div></br></br>
             </div></br>
-            <div class="cardbody">
+            <div class="cardbody" id="contcoupon">
                 <div class="container">
                     <div class="divconthome">
                     </br>Learn more about the world of coffee!
@@ -301,7 +321,7 @@
                     </br></br>
                 </div>
             </div>
-           <div class="footerdiv">
+           <div class="footerdiv" id="contcoupon">
                 <div class="container">
                     <footer>
                         <hr/>
@@ -343,5 +363,49 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"  referrerpolicy="no-referrer"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script>
+        window.onload=onloadPage();
+            let cpnbtn=document.getElementById('cpnbtn');
+            let cpncode=document.getElementById('cpncode');
+            cpnbtn.onclick=function(){
+             navigator.clipboard.writeText(cpncode.innerHTML);
+             cpnbtn.innerHTML="COPYED";
+        setTimeout(function() {
+            cpnbtn.innerHTML="COPY CODE";
+        }, 3000);
+    }
+
+    let x=document.getElementById('out');
+        let y=document.getElementById('weather');
+
+        function geolocation(){
+            if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(showPosition)
+            }
+            else{
+                x.innerText="Geo Not Supported"
+            }
+        }
+        function showPosition(data) {
+            console.log(data);
+            let lat=data.coords.latitude;
+            let lon=data.coords.longitude;
+           // x.innerText=`Latitude is ${lat} and Longitude is ${lon}`
+            //x.innerText='latitude is  ' + {lat} +' and longitude is ' + {lon} 
+            const url=`https://api.openweathermap.org/data/2.5/forecast/daily?lat=${lat}&lon=${lon}&mode=json&units=metric&cnt=5&appid=fbf712a5a83d7305c3cda4ca8fe7ef29`
+            //api call
+            fetch(url,{method:'GET'})
+            .then((res) =>   res.json())
+            .then((data)    =>  {
+                console.log(data)
+                let cityname = data.city.name;
+                let temp = data.list[0].temp.day+" °C"
+                y.innerText=`${cityname} is ${temp}`
+                
+            })
+        }
+
+
+    </script>
     </body>
 </html>
